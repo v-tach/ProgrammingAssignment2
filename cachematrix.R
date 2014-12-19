@@ -1,9 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This is a set of two functions that will cooperate
+## to calculate the inverse of a matrix and cache the results
 
-## This function will create a list functions
+## This function will create an object
 ## When the function is applied to a matrix
-## it will save the matrix
+## it will save an object holding the matrix
+## and helper functions to get access to the
+## original matrix, and  to calculate the matrix's
+## inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 		# set the cache to NULL initially
@@ -28,10 +31,10 @@ makeCacheMatrix <- function(x = matrix()) {
 		}
 
 
-## This function takes the list above and pulls out
+## This function takes the object above and pulls out
 ## the cache  of the inverse of the matrix (if it exists),
-## or uses the functions in the list to calculate the inverse
-## and cache the results
+## or uses the functions in the object to calculate the inverse
+## and cache the results. It returns the inverse of the matrix.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
